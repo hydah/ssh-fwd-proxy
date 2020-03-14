@@ -55,7 +55,7 @@ do
 			/usr/bin/expect ./ssh-proxy.exp $ssh_username 127.0.0.1 $kcp_lport $ssh_passwd $sock_proxy_lport >> $logfile 2>&1
 		else
 			echot "not use kcp" $logfile
-			bash ./ssh-proxy.exp $ssh_username $rhost 22 $ssh_passwd  $sock_proxy_lport >> $logfile 2>&1
+			/usr/bin/expect ./ssh-proxy.exp $ssh_username $rhost 22 $ssh_passwd  $sock_proxy_lport >> $logfile 2>&1
 		fi
 		echot "ssh fwd failed, tye again 3s later" $logfile
 	else
